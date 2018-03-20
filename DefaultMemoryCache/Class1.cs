@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OneScript_MemoryCache
+namespace DefaultMemoryCache
 {
     public class Class1
     {

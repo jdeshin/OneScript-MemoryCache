@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("OneScript-MemoryCache")]
+[assembly: AssemblyTitle("DefaultMemoryCache")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("OneScript-MemoryCache")]
+[assembly: AssemblyProduct("DefaultMemoryCache")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("80443e81-c54c-4db6-ad37-6cf4d614046b")]
+[assembly: Guid("33dcc0f4-5ef7-4061-9f0b-2d3f4d2166f7")]
 
 // Version information for an assembly consists of the following four values:
 //
