@@ -36,21 +36,21 @@ namespace OneScript.DefaultMemoryCache
         }
 
         [ContextProperty("ДатаИстечения", "AbsoluteExpiration")]
-        public DateTime? AbsoluteExpiration
+        public IValue AbsoluteExpiration
         {
             get
             {
                 if (_policy.AbsoluteExpiration == ObjectCache.InfiniteAbsoluteExpiration)
-                    return null;
+                    return ValueFactory.Create();
                 else
-                    return _policy.AbsoluteExpiration.UtcDateTime.ToLocalTime();
+                    return ValueFactory.Create(_policy.AbsoluteExpiration.UtcDateTime.ToLocalTime());
             }
             set
             {
-                if (value == null)
+                if (value == ValueFactory.Create() || value == null)
                     _policy.AbsoluteExpiration = ObjectCache.InfiniteAbsoluteExpiration;
                 else
-                    _policy.AbsoluteExpiration = new DateTimeOffset(((DateTime)value).ToUniversalTime());
+                    _policy.AbsoluteExpiration = new DateTimeOffset((value.AsDate()).ToUniversalTime());
             }
         }
 
