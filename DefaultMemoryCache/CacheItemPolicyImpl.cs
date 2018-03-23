@@ -36,6 +36,7 @@ namespace OneScript.DefaultMemoryCache
         }
 
         [ContextProperty("ДатаИстечения", "AbsoluteExpiration")]
+        // Должно быть DateTime?, но из за кривого маршаллера IValue
         public IValue AbsoluteExpiration
         {
             get
@@ -55,6 +56,7 @@ namespace OneScript.DefaultMemoryCache
         }
 
         [ContextProperty("ПериодНеИспользования", "SlidingExpiration")]
+        // Должно быть int?, но из за кривого маршаллера IValue
         public IValue SlidingExpiration
         {
             get
