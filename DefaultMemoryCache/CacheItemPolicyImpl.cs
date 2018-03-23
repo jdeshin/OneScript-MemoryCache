@@ -55,21 +55,21 @@ namespace OneScript.DefaultMemoryCache
         }
 
         [ContextProperty("ПериодНеИспользования", "SlidingExpiration")]
-        public int? SlidingExpiration
+        public IValue SlidingExpiration
         {
             get
             {
                 if (_policy.SlidingExpiration == ObjectCache.NoSlidingExpiration)
-                    return null;
+                    return ValueFactory.Create();
                 else
-                    return _policy.SlidingExpiration.Seconds;
+                    return ValueFactory.Create(_policy.SlidingExpiration.Seconds);
             }
             set
             {
-                if (value == null)
+                if (value == null || value == ValueFactory.Create())
                     _policy.SlidingExpiration = ObjectCache.NoSlidingExpiration;
                 else
-                    _policy.SlidingExpiration = new TimeSpan(0, 0, (int)value);
+                    _policy.SlidingExpiration = new TimeSpan(0, 0, (int)(value.AsNumber()));
             }
         }
 
