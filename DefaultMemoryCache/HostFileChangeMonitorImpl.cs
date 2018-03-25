@@ -13,7 +13,7 @@ using ScriptEngine.HostedScript.Library;
 
 namespace OneScript.DefaultMemoryCache
 {
-    [ContextClass("МониторИзменеияФайловНаКомпьютере", "HostFileChangeMonitor")]
+    [ContextClass("МониторИзмененияФайловНаКомпьютере", "HostFileChangeMonitor")]
     public class HostFileChangeMonitorImpl : AutoContext<HostFileChangeMonitorImpl>
     {
         HostFileChangeMonitor _monitor;
