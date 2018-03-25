@@ -40,6 +40,18 @@ namespace OneScript.DefaultMemoryCache
             return (IValue)result;
         }
 
+        [ContextMethod("Удалить", "Remove")]
+        public IValue Remove(string key)
+        {
+            object result = MemoryCache.Default.Remove(key);
+
+            if (result == null)
+                return ValueFactory.Create();
+
+            return (IValue)result;
+        }
+
+
         [ContextProperty("ОграничениеКэшаПамяти", "CacheMemoryLimit")]
         public long CacheMemoryLimit
         {
